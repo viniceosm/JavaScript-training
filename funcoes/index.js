@@ -48,7 +48,7 @@ console.log('Mostra k fora: ', k);
 
 console.log('-------------------');
 
-// IFEE - Função auto-invocável
+// IIFE - Função auto-invocável
 (function () {
     'use strict';
     // isValid = false;

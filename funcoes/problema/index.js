@@ -17,5 +17,4 @@
 
     console.log("Media um: ", mediaUm);
     console.log("Media Dois: ", mediaDois);
-    
 })();
