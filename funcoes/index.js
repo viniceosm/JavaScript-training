@@ -46,3 +46,24 @@ console.log('Mostra x fora: ', x);
 console.log('Mostra y fora: ', y);
 console.log('Mostra k fora: ', k);
 
+console.log('-------------------');
+
+// IFEE - Função auto-invocável
+(function () {
+    'use strict';
+    // isValid = false;
+
+    function somar() {
+        console.log(arguments);
+        var result = 0;
+        var x =0;
+
+        while(arguments[x]){
+            result +=arguments[x];
+            x++;
+        }
+        console.log('Result: ', result);
+    }
+
+    somar(20, 20, 10, 30);
+})();
