@@ -1,5 +1,5 @@
-(function () {
-    var nome = prompt('Qual seu nome?');
-    // Propriedade textContent somente texto
-    document.querySelector('#msg').innerHTML = `Bem-vindo, <b>${nome}</b>`;
-})();
+// Propriedade textContent somente texto
+function escreve() {   
+    var txtNome = document.querySelector('#txtNome');
+    document.querySelector('#msg').innerHTML = `Bem-vindo, <b>${txtNome.value}</b>`;   
+}
