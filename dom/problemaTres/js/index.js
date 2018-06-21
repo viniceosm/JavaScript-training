@@ -7,7 +7,7 @@
         var tds = linhaAluno.querySelectorAll('td');
         var notas = recuperarNumerosDeColunas(tds);
 
-        media = calcularMedia.apply(this, notas);
+        var media = calcularMedia.apply(this, notas);
 
         linhaAluno.querySelector('.aluno-m').textContent = media;
         x++;
