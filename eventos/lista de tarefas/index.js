@@ -1,14 +1,20 @@
 (function () {
     'use strict';
-    var ul = document.querySelector('ul');
-    var txtTask = document.querySelector('#txtTask');
-    var btn = document.querySelector('#btn');
+    let ul = document.querySelector('ul');
+    let txtTask = document.querySelector('#txtTask');
+    let btn = document.querySelector('#btn');
 
-    btn.addEventListener('click', () => {
-        var task = `<li>${txtTask.value}</li>`;
+    btn.addEventListener('click', addTask);
+    txtTask.addEventListener('keyup', (e) => {
+        if (e.keyCode === 13)
+            addTask();
+    });
+
+    function addTask() {
+        let task = `<li>${txtTask.value}</li>`;
         ul.innerHTML += task;
         limpaCampo();
-    });
+    };
 
     function limpaCampo() {
         txtTask.value = "";
