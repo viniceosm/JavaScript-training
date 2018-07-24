@@ -13,7 +13,15 @@
     ul.addEventListener('click', (e) => {
         if (e.target.nodeName === 'LI') 
             toggleDone(e.target);
+
+        removeTask(e.target);
     });
+
+    function removeTask(li) {
+        if (confirm(`Deseja remover a tarefa ${li.textContent} ?`)) {
+            li.parentNode.removeChild(li);
+        }
+    }
 
     function toggleDone(li) {
         li.classList.toggle('done');
