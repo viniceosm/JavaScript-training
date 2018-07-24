@@ -20,8 +20,13 @@
     }
 
     function addTask() {
-        let task = `<li>${txtTask.value}</li>`;
-        ul.innerHTML += task;
+        let li = document.createElement('li');
+        let text = document.createTextNode(txtTask.value);
+        
+        li.appendChild(text);
+
+        ul.appendChild(li);
+
         limpaCampo();
     };
 
