@@ -1,7 +1,6 @@
 (function () {
     'use strict';
     let ul = document.querySelector('ul');
-    let lis = ul.querySelectorAll('li');
     let txtTask = document.querySelector('#txtTask');
     let btn = document.querySelector('#btn');
 
@@ -11,12 +10,13 @@
             addTask();
     });
 
-    for (const iterator of lis) {
-        addEvent(iterator);
-    }
+    ul.addEventListener('click', (e) => {
+        if (e.target.nodeName === 'LI') 
+            toggleDone(e.target);
+    });
 
-    function toggleDone() {
-        this.classList.toggle('done');
+    function toggleDone(li) {
+        li.classList.toggle('done');
     }
 
     function addTask() {
@@ -25,14 +25,9 @@
         
         li.appendChild(text);
         ul.appendChild(li);
-        
-        addEvent(li);
+    
         limpaCampo();
     };
-
-    function addEvent(li) {
-        li.addEventListener('click', toggleDone);
-    }
 
     function limpaCampo() {
         txtTask.value = "";
