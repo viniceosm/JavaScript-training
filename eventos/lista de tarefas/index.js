@@ -12,7 +12,7 @@
     });
 
     for (const iterator of lis) {
-        iterator.addEventListener('click', toggleDone);
+        addEvent(iterator);
     }
 
     function toggleDone() {
@@ -24,11 +24,15 @@
         let text = document.createTextNode(txtTask.value);
         
         li.appendChild(text);
-
         ul.appendChild(li);
-
+        
+        addEvent(li);
         limpaCampo();
     };
+
+    function addEvent(li) {
+        li.addEventListener('click', toggleDone);
+    }
 
     function limpaCampo() {
         txtTask.value = "";
