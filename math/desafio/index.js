@@ -1,3 +1,6 @@
-var media = calcularMedia(3.45, 2.86, 5.478, 6.84759);
+function init() {
+    var n = sortear(3) + 1;
+    document.querySelector('body').style.backgroundImage = "url(img/"+n+".jpeg)";
+}
 
-console.log(media);
+init();
