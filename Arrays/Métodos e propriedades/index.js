@@ -78,3 +78,31 @@ console.log("posicaoStr2", posicaoStr2);
 // lastIndexOf pega a posição do valor informado começando de tras pra frente
 var posicaoStr3 = arr.lastIndexOf(20);
 console.log("posicaoStr3", posicaoStr3);
+
+
+
+// Map realiza alterações em valores
+mapa = numeros.map(function (el, index, arr) {
+    return el * index;
+});
+console.log('Map: ', mapa);
+
+
+
+// Concat ajunta arr
+var arr2 = arr.concat(numeros);
+console.log('Concat 1: ', arr2);
+
+// Pasando valores alem do arry no concat
+var arr3 = arr.concat(numeros, 664, 323223);
+console.log('Concat 2: ', arr3);
+
+
+
+// Join transformar array numa string
+var str1 = arr2.join();
+console.log('Join 1: ', str1);
+
+// Join recebendo caracter separador
+var str2 = arr2.join(' -- '); 
+console.log('Join 2: ', str2);
