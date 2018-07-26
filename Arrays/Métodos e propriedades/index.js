@@ -106,3 +106,27 @@ console.log('Join 1: ', str1);
 // Join recebendo caracter separador
 var str2 = arr2.join(' -- '); 
 console.log('Join 2: ', str2);
+
+
+
+// Push adiciona novos elementos ao final do array
+arr.push('novo item');
+console.log('Push:', arr);
+
+
+
+// Pop remove o ultimo item e devolve pra quem chamou
+var ultimoItem = arr.pop();
+console.log('pop: ', ultimoItem);
+
+
+
+// Shift remove o primeiro item e devolve pra quem chamou
+var primeiroItem = arr.shift();
+console.log('Shift: ', primeiroItem);
+
+
+
+// unShift adiciona um novo elemento no inicio do array
+arr.unshift('true', false, 'unshift')
+console.log(arr);
