@@ -174,7 +174,7 @@ console.log(arr2.slice(2,5)); // remove o primeiro no caso o 2 e inclui o 5
 
 
 
-// splice consegue incluir incluir, remover, adicionar no meio do array
+// splice consegue incluir, remover, adiciona no meio do array
 spliceArr = [20,80,90,50];
 spliceArr.splice(2,0,'limao', 'melao');
 console.log('splice:', spliceArr);
