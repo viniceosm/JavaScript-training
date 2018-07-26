@@ -130,3 +130,35 @@ console.log('Shift: ', primeiroItem);
 // unShift adiciona um novo elemento no inicio do array
 arr.unshift('true', false, 'unshift')
 console.log(arr);
+
+
+
+// Reduce pega um array e retornar um unico valor
+var somaDeArr = numeros.reduce(function (anterior, atual, index) {
+    // console.log('anterior: ', anterior);
+    // console.log('atual: ', atual);
+    // console.log('index: ', index);
+    
+    return anterior + atual + index;
+}, 1); // 1 = valor inicial passa pro valor anterior
+console.log('Reduce 1: ', somaDeArr);
+
+var usuandoReduce = ['1', '2', '3', '4', '5'].reduce(function (i, a) {
+    return i + a;
+})
+console.log('Reduce 2: ', usuandoReduce);
+
+
+
+// reduceRight pega um array e inicia os valores pela direita
+var reduceRight = ['1', '2', '3', '4', '5'].reduceRight(function (i, a) {
+    return i + a;
+})
+console.log('reduceRight 1: ', reduceRight);
+
+
+// Reverse inverte a ordem do array
+console.log('reverse 1: ', [10,20,30].reverse());
+var arr4 = [1,50,30,40];
+console.log('reverse 2: ', arr4.reverse());
+
