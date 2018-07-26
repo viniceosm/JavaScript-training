@@ -157,8 +157,27 @@ var reduceRight = ['1', '2', '3', '4', '5'].reduceRight(function (i, a) {
 console.log('reduceRight 1: ', reduceRight);
 
 
+
 // Reverse inverte a ordem do array
 console.log('reverse 1: ', [10,20,30].reverse());
 var arr4 = [1,50,30,40];
 console.log('reverse 2: ', arr4.reverse());
 
+
+
+// slice retorna um pedaço de um array
+console.log(arr2.slice(2)); // devolve os elementos apartir no valor informado
+
+// devolve os elementos apartir no valor informado até o segundo valor informado
+console.log(arr2.slice(2,5)); // remove o primeiro no caso o 2 e inclui o 5
+
+
+
+
+// splice consegue incluir incluir, remover, adicionar no meio do array
+spliceArr = [20,80,90,50];
+spliceArr.splice(2,0,'limao', 'melao');
+console.log('splice:', spliceArr);
+// 2 = posição onde começa a transformar a array
+// 0 = não quer remover elemento algum
+// 3 = elementos que quero incluir no array
