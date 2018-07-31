@@ -14,12 +14,12 @@ function chromotherapy() {
 	randomColor();
 	chromotherapyIntervalID = setInterval(function () {
 		randomColor();
-	}, 300 * 100);
+	}, 30 * 1000);
 }
 
 function randomColor() {
 	var random_number = Math.floor(Math.random() * colors.length);
-	$('body').animate({ backgroundColor: colors[random_number] }, 100 * 100);
+	$('body').animate({ backgroundColor: colors[random_number] }, 10 * 1000);
 }
 
 function stopChromotherapy() {
