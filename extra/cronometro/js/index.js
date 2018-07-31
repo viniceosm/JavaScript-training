@@ -4,7 +4,8 @@ let s = 1; m = 0; h = 0;
 
 btnIniciar.addEventListener('click', () => {
 	window.setInterval(function () {
-		if (s == 60) { m++; s = 0;}; if (m == 60) { h++; s = 0; m = 0;};
+		s == 60 ? (m++, s = 0) : '';
+		m == 60 ? (h++, s = 0, m = 0) : '';
 
 		h < 10 ? spanHora.textContent = `0${h}` : spanHora.textContent = `${h}`;
 		m < 10 ? spanMinuto.textContent = `0${m}` : spanMinuto.textContent = `${m}`;
