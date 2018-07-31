@@ -10,19 +10,29 @@
 	<title>Cronômetro</title>
   </head>
   <body>
-	<div class="container">
-		<div class="card border-primary mb-3" style="max-width: 17rem;">
-			<span class="card-header">Cronômetro</span>
-			<div class="card-body text-primary">
-				<h6>Temos tão pouco tempo</h6>
-				<h3>
-					<span id="spanHora">00</span>:
-					<span id="spanMinuto">00</span>:
-					<span id="spanSegundo">00</span>
-				</h3>
-				<button id="btnIniciar" class="btn btn-secondary">Iniciar</button>
-				<button id="btnLimpar" class="btn btn-light" disabled>Limpar</button>
-				<button id="btnParar" class="btn btn-danger" disabled>Parar</button>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<p class="lead">Aprender sem pensar é tempo perdido. ~ Confúcio</p>
+				<div class="dataAtual" id="informaDataAtual"></div>
+				<div class="separador"></div>
+				<div class="horaAtual" id="informaHoraAtual"></div>
+			</div>
+		</div>
+	<div class="container ">
+		<div class="row color">
+			<div class="card border-primary mb-3 " style="max-width: 17rem;">
+				<span class="card-header">Cronômetro</span>
+				<div class="card-body text-primary">
+					<h6>Temos tão pouco tempo</h6>
+					<h3>
+						<span id="spanHora">00</span>:
+						<span id="spanMinuto">00</span>:
+						<span id="spanSegundo">00</span>
+					</h3>
+					<button id="btnIniciar" class="btn btn-secondary">Iniciar</button>
+					<button id="btnLimpar" class="btn btn-light" disabled>Limpar</button>
+					<button id="btnParar" class="btn btn-danger" disabled>Parar</button>
+				</div>
 			</div>
 		</div>
 	</div>

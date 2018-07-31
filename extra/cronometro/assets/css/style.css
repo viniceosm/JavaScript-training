@@ -4,3 +4,9 @@
 .container div {
     margin: 10px auto;
 }
+
+.jumbotron {
+    background-color: #474747;
+    font-family: "monospace";
+    color: #76b8f5;
+}

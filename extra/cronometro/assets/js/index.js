@@ -42,3 +42,41 @@ btnLimpar.addEventListener('click', () => {
 
 	btnIniciar.disabled = false; btnLimpar.disabled = true; btnParar.disabled = true;
 });
+
+function informarHoraAtual() {
+	// obtpem a data/hora atual
+	var dataHoraAtual = new Date();
+
+	var dia = dataHoraAtual.getDate(); // 1-31
+	var diaSem = dataHoraAtual.getDay(); // 0-6 (zero=domingo)
+	var mes = dataHoraAtual.getMonth(); // 0-11 (zero=janeiro)
+	var ano = dataHoraAtual.getFullYear(); // 4 dígitos
+	var hora = dataHoraAtual.getHours();  // 0-23
+	var min = dataHoraAtual.getMinutes(); // 0-59
+	var seg = dataHoraAtual.getSeconds(); // 0-59
+
+	var sHora = new String(hora);
+	if (sHora.length == 1) {
+		hora = "0" + hora;
+	};
+
+	var sMin = new String(min);
+	if (sMin.length == 1) {
+		min = "0" + min;
+	};
+
+	var sSeg = new String(seg);
+	if (sSeg.length == 1) {
+		seg = "0" + seg;
+	};
+
+	var nomeDias = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+	var nomeMes = new Array("janeiro", "fevereiro", "março", "abril", "maio", "junho", "Julho", "agosto", "setembro", "outubro", "novembro", "dezembro");
+
+	document.getElementById("informaHoraAtual").innerHTML = hora + ":" + min + ":" + seg;
+	document.getElementById("informaDataAtual").innerHTML = nomeDias[diaSem] + ", " + dia + " de " + nomeMes[mes] + " de " + ano;
+
+	setTimeout("informarHoraAtual()", 1000)
+};
+
+informarHoraAtual();
