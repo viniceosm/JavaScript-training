@@ -7,6 +7,11 @@ function pararCronometro() {
 	clearInterval(iniciar);
 };
 
+function limparCronometro() {
+	spanHora.textContent = '00'; spanMinuto.textContent = '00'; spanSegundo.textContent = '00';
+	[s, m, h] = [1, 0, 0];
+};
+
 function iniciarCronometro() {
 	iniciar = window.setInterval(() => {
 		s == 60 ? (m++ , s = 0) : '';
@@ -33,8 +38,7 @@ btnParar.addEventListener('click', () => {
 
 btnLimpar.addEventListener('click', () => {
 	pararCronometro();
-
-	spanHora.textContent = '00'; spanMinuto.textContent = '00'; spanSegundo.textContent = '00';
+	limparCronometro();
 
 	btnIniciar.disabled = false; btnLimpar.disabled = true; btnParar.disabled = true;
 });
